@@ -19,19 +19,19 @@
       <TextField layoutX="95.0" layoutY="12.0" prefHeight="25.0" prefWidth="496.0" />
       <TableView layoutX="14.0" layoutY="47.0" prefHeight="274.0" prefWidth="574.0">
          <columns>
-            <TableColumn prefWidth="75.0" text="ID No." />
-            <TableColumn prefWidth="165.0" text="Name" />
-            <TableColumn prefWidth="174.0" text="Company" />
-            <TableColumn prefWidth="63.0" text="Type" />
-            <TableColumn prefWidth="96.0" text="Date" />
+            <TableColumn fx:id="IDno" prefWidth="75.0" text="ID No." />
+            <TableColumn fx:id="Name" prefWidth="165.0" text="Name" />
+            <TableColumn fx:id="Company" prefWidth="174.0" text="Company" />
+            <TableColumn fx:id="Type" prefWidth="63.0" text="Type" />
+            <TableColumn fx:id="Date" prefWidth="96.0" text="Date" />
          </columns>
       </TableView>
-      <Button layoutX="14.0" layoutY="344.0" mnemonicParsing="false" text="Download Results">
+      <Button fx:id="downRes" layoutX="14.0" layoutY="344.0" mnemonicParsing="false" text="Download Results">
          <font>
             <Font size="15.0" />
          </font>
       </Button>
-      <Button layoutX="499.0" layoutY="344.0" mnemonicParsing="false" text="Start Over">
+      <Button fx:id="newSearch" layoutX="499.0" layoutY="344.0" mnemonicParsing="false" text="Start Over">
          <font>
             <Font size="15.0" />
          </font>
