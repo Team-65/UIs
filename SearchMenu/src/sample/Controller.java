@@ -9,16 +9,10 @@ import java.util.ResourceBundle;
 import javafx.scene.control.CheckBox;
 
 public class Controller {
-    @FXML
-    Button: Back;
-    @FXML
-    Button: Search;
-    @FXML
-    CheckBox: IsWine;
-    @FXML
-    CheckBox: IsBeer;
-    @FXML
-    CheckBox: IsOther;
-    @FXML
-    TextField: Tags;
+    @FXML Button Back;
+    @FXML Button Search;
+    @FXML CheckBox IsWine;
+    @FXML CheckBox IsBeer;
+    @FXML CheckBox IsOther;
+    @FXML TextField Tags;
 }
