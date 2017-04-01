@@ -27,7 +27,7 @@ public class MainMenuController{
     }
 
     @FXML
-    private Button openSearchButton, openInboxButton, openNewApplicationButton, logOutButton;
+    private Button openSearchButton, openInboxButton, createNewApplicationButton, logOutButton;
 
 
     public void buttonClicked(ActionEvent e) {
@@ -37,7 +37,7 @@ public class MainMenuController{
             }else if(e.getSource() == openInboxButton){
                 fxmlLoader = new FXMLLoader(getClass().getResource("Login.fxml"));
 
-            }else if(e.getSource() == openNewApplicationButton){
+            }else if(e.getSource() == createNewApplicationButton){
                 fxmlLoader = new FXMLLoader(getClass().getResource("NewAccount.fxml"));
 
             }else if(e.getSource() == logOutButton){
