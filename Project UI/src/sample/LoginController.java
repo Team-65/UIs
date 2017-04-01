@@ -15,6 +15,7 @@ import javafx.stage.Modality;
 import javafx.stage.Stage;
 import javafx.stage.StageStyle;
 
+import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 
@@ -73,8 +74,20 @@ public class LoginController {
         ((Node)(event.getSource())).getScene().getWindow().hide();
     }
 
-    public void createAccount(ActionEvent event){
+    public void createAccount(javafx.event.ActionEvent event){
+        fxmlLoader = new FXMLLoader(getClass().getResource("NewAccount.fxml"));
+        ((Node)(event.getSource())).getScene().getWindow().hide();
+        Parent root1 = null;
+        try {
+            root1 = fxmlLoader.load();
+        } catch (IOException e){
+            e.printStackTrace();
+        }
 
+        Stage stage = new Stage();
+        stage.setTitle("NewAccount");
+        stage.setScene(new Scene(root1));
+        stage.show();
 
 
     }

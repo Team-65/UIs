@@ -8,7 +8,7 @@ import java.awt.event.ActionEvent;
 import java.util.ResourceBundle;
 import javafx.scene.control.CheckBox;
 
-public class Controller {
+public class SearchMenuController {
     @FXML Button Back;
     @FXML Button Search;
     @FXML CheckBox IsWine;
