@@ -13,7 +13,7 @@ import java.io.IOException;
 public class NewAppController {
 
     private FXMLLoader fxmlLoader;
-    @FXML Button back, newApp;
+    @FXML Button back, newApp, oldApp;
 
 
     public void buttonClicked (javafx.event.ActionEvent event){
@@ -25,8 +25,10 @@ public class NewAppController {
             }else if (event.getSource() == newApp) {
                 fxmlLoader = new FXMLLoader(getClass().getResource("NewLabel.fxml"));
                 ((Node) (event.getSource())).getScene().getWindow().hide();
+            } else if (event.getSource() == oldApp) {
+                fxmlLoader = new FXMLLoader(getClass().getResource("ReviewMenu.fxml"));
+                ((Node) (event.getSource())).getScene().getWindow().hide();
             }
-
             Parent root1 = null;
             root1 = fxmlLoader.load();
             Stage stage = new Stage();
