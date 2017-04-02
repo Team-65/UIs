@@ -29,6 +29,10 @@ public class SearchMenuController {
                 fxmlLoader = new FXMLLoader(getClass().getResource("MainMenu.fxml"));
                 ((Node)(event.getSource())).getScene().getWindow().hide();
             }
+            if(event.getSource() == Search){
+                fxmlLoader = new FXMLLoader(getClass().getResource("ErrorState.fxml"));
+                ((Node)(event.getSource())).getScene().getWindow().hide();
+            }
             Parent root1 = null;
             root1 = fxmlLoader.load();
             Stage stage = new Stage();
@@ -40,5 +44,4 @@ public class SearchMenuController {
             ex.printStackTrace();
         }
     }
-
 }

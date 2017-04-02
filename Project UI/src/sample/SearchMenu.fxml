@@ -25,7 +25,7 @@
          </font>
       </Label>
       <Button fx:id="Back" layoutX="46.0" layoutY="306.0" mnemonicParsing="false" onAction="#buttonClicked" text="Back" />
-      <Button fx:id="Search" layoutX="456.0" layoutY="296.0" mnemonicParsing="false" text="Search">
+      <Button fx:id="Search" layoutX="456.0" layoutY="296.0" mnemonicParsing="false" onAction="#buttonClicked" text="Search">
          <font>
             <Font size="20.0" />
          </font>
