@@ -12,8 +12,8 @@
             <Font size="30.0" />
          </font>
       </Label>
-      <Button fx:id="back" layoutX="276.0" layoutY="273.0" mnemonicParsing="false" onAction="#backToMenu" text="Back" />
-      <Button fx:id="newApp" layoutX="210.0" layoutY="138.0" mnemonicParsing="false" onAction="#goToNewLabel" prefHeight="27.0" prefWidth="184.0" text="Create New Application" />
+      <Button fx:id="back" layoutX="276.0" layoutY="273.0" mnemonicParsing="false" onAction="#buttonClicked" text="Back" />
+      <Button fx:id="newApp" layoutX="210.0" layoutY="138.0" mnemonicParsing="false" onAction="#buttonClicked" prefHeight="27.0" prefWidth="184.0" text="Create New Application" />
       <Button fx:id="oldApp" layoutX="208.0" layoutY="187.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="184.0" text="Revise Old Application" />
    </children>
 </Pane>

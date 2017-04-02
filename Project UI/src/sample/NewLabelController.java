@@ -20,7 +20,7 @@ public class NewLabelController {
 
     @FXML private Button backButton;
 
-    public void backToMenu (javafx.event.ActionEvent event){
+    public void buttonClicked (javafx.event.ActionEvent event){
         fxmlLoader = new FXMLLoader(getClass().getResource("MainMenu.fxml"));
         ((Node)(event.getSource())).getScene().getWindow().hide();
         Parent root1 = null;

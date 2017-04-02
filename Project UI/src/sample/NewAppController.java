@@ -15,23 +15,31 @@ public class NewAppController {
     private FXMLLoader fxmlLoader;
 
 
-    @FXML Button back;
+    @FXML Button back, newApp;
 
 
-    public void backToMenu (javafx.event.ActionEvent event){
-        fxmlLoader = new FXMLLoader(getClass().getResource("MainMenu.fxml"));
-        ((Node)(event.getSource())).getScene().getWindow().hide();
-        Parent root1 = null;
+    public void buttonClicked (javafx.event.ActionEvent event){
         try {
+            if(event.getSource() == back){
+                fxmlLoader = new FXMLLoader(getClass().getResource("MainMenu.fxml"));
+                ((Node)(event.getSource())).getScene().getWindow().hide();
+
+            }else if (event.getSource() == newApp) {
+                fxmlLoader = new FXMLLoader(getClass().getResource("NewLabel.fxml"));
+                ((Node) (event.getSource())).getScene().getWindow().hide();
+            }
+
+            Parent root1 = null;
             root1 = fxmlLoader.load();
-        } catch (IOException e){
+            Stage stage = new Stage();
+            stage.setTitle("MainMenu");
+            stage.setScene(new Scene(root1));
+            stage.show();
+
+        }catch (IOException e){
             e.printStackTrace();
         }
 
-        Stage stage = new Stage();
-        stage.setTitle("MainMenu");
-        stage.setScene(new Scene(root1));
-        stage.show();
 
 
     }
