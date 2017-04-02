@@ -21,7 +21,7 @@ public class NewAccountController {
 
     @FXML private TextField newUsernameField;
     @FXML private ChoiceBox accountChoiceBox;
-    @FXML private Button backToMenu;
+    @FXML private Button back;
 
 
     private String newUsername;
@@ -36,22 +36,22 @@ public class NewAccountController {
     }
 
 
-    public void backToMenu (javafx.event.ActionEvent event){
-        fxmlLoader = new FXMLLoader(getClass().getResource("Login.fxml"));
-        ((Node)(event.getSource())).getScene().getWindow().hide();
-        Parent root1 = null;
+    public void buttonClicked (javafx.event.ActionEvent event){
         try {
+            if(event.getSource() == back){
+                fxmlLoader = new FXMLLoader(getClass().getResource("Login.fxml"));
+                ((Node)(event.getSource())).getScene().getWindow().hide();
+            }
+            Parent root1 = null;
             root1 = fxmlLoader.load();
-        } catch (IOException e){
-            e.printStackTrace();
+            Stage stage = new Stage();
+            stage.setTitle("Login");
+            stage.setScene(new Scene(root1));
+            stage.show();
+
+        }catch(Exception ex){
+            ex.printStackTrace();
         }
-
-        Stage stage = new Stage();
-        stage.setTitle("Login");
-        stage.setScene(new Scene(root1));
-        stage.show();
-
-
     }
 
 

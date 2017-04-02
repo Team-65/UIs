@@ -1,14 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.control.TextField?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.CheckBox?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
 
-
-<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.ReviewPDFController">
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.SearchMenuController">
    <children>
       <Label layoutX="244.0" layoutY="46.0" text="Search">
          <font>
@@ -25,7 +24,7 @@
             <Font size="16.0" />
          </font>
       </Label>
-      <Button fx:id="Back" layoutX="46.0" layoutY="306.0" mnemonicParsing="false" text="Back" />
+      <Button fx:id="Back" layoutX="46.0" layoutY="306.0" mnemonicParsing="false" onAction="#buttonClicked" text="Back" />
       <Button fx:id="Search" layoutX="456.0" layoutY="296.0" mnemonicParsing="false" text="Search">
          <font>
             <Font size="20.0" />

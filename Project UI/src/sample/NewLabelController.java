@@ -18,23 +18,24 @@ public class NewLabelController {
 
     private FXMLLoader fxmlLoader;
 
-    @FXML private Button backButton;
+    @FXML private Button back;
 
     public void buttonClicked (javafx.event.ActionEvent event){
-        fxmlLoader = new FXMLLoader(getClass().getResource("MainMenu.fxml"));
-        ((Node)(event.getSource())).getScene().getWindow().hide();
-        Parent root1 = null;
         try {
+            if(event.getSource() == back){
+                fxmlLoader = new FXMLLoader(getClass().getResource("MainMenu.fxml"));
+                ((Node)(event.getSource())).getScene().getWindow().hide();
+            }
+            Parent root1 = null;
             root1 = fxmlLoader.load();
-        } catch (IOException e){
-            e.printStackTrace();
+            Stage stage = new Stage();
+            stage.setTitle("MainMenu");
+            stage.setScene(new Scene(root1));
+            stage.show();
+
+        }catch(Exception ex){
+            ex.printStackTrace();
         }
-
-        Stage stage = new Stage();
-        stage.setTitle("MainMenu");
-        stage.setScene(new Scene(root1));
-        stage.show();
-
     }
 
 

@@ -13,8 +13,6 @@ import java.io.IOException;
 public class NewAppController {
 
     private FXMLLoader fxmlLoader;
-
-
     @FXML Button back, newApp;
 
 
@@ -39,8 +37,6 @@ public class NewAppController {
         }catch (IOException e){
             e.printStackTrace();
         }
-
-
 
     }
 }

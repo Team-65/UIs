@@ -38,11 +38,11 @@ public class MainMenuController{
     public void buttonClicked(ActionEvent e) {
         try{
             if(e.getSource() == openSearchButton){
-                fxmlLoader = new FXMLLoader(getClass().getResource("MainMenu.fxml"));
+                fxmlLoader = new FXMLLoader(getClass().getResource("SearchMenu.fxml"));
                 ((Node)(e.getSource())).getScene().getWindow().hide();
 
             }else if(e.getSource() == openInboxButton){
-                fxmlLoader = new FXMLLoader(getClass().getResource("Workflow.fxml"));
+                fxmlLoader = new FXMLLoader(getClass().getResource("WorkFlow.fxml"));
                 ((Node)(e.getSource())).getScene().getWindow().hide();
 
             }else if(e.getSource() == createNewApplicationButton){
